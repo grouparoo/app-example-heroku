@@ -1,6 +1,6 @@
 {
   "name": "Grouparoo",
-  "description": "The Grouparoo Monorepo - Open Source Marketing Infrastructure",
+  "description": "Grouparoo - The Open Source Customer Data Sync Framework",
   "repository": "https://github.com/grouparoo/grouparoo",
   "website": "https://www.grouparoo.com",
   "logo": "https://raw.githubusercontent.com/grouparoo/grouparoo/main/core/public/images/logo/logo.svg",
