@@ -34,6 +34,10 @@ worker: cd node_modules/@grouparoo/core && WEB_SERVER=false WORKERS=10 ./bin/sta
    - at least `standard2` for the Postgres Database
    - at least `premium0` for the Redis Database
 2. Configure Heroku to automatically deploy the `main` branch of your repository.
+3. Configure the following environment variables:
+   - `DATABASE_SSL_SELF_SIGNED=true` - The lower tier of Heroku databases use self-signed SSL certificates
+   - `GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP=true`- Heroku adds timestamps to all log messages
+   - `GROUPAROO_LOGS_STDOUT_DISABLE_COLOR=true`- Heroku will not render log messages in color
 
 ## Alternative Deployment
 

@@ -31,6 +31,7 @@
       "required": true
     },
     "GROUPAROO_LOGS_STDOUT_DISABLE_COLOR": "true",
-    "GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP": "true"
+    "GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP": "true",
+    "DATABASE_SSL_SELF_SIGNED": "true"
   }
 }
