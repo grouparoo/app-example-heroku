@@ -29,7 +29,10 @@ worker: cd node_modules/@grouparoo/core && WEB_SERVER=false WORKERS=10 ./bin/sta
 
 ## Deployment Steps
 
-1. Create a new Heroku app with `Heroku Postgres` and `Heroku Redis`. Heroku will automatically configure the environment variables `DATABASE_URL` and `REDIS_URL` for you.
+1. Create a new Heroku app with `Heroku Postgres` and `Heroku Redis`. Heroku will automatically configure the environment variables `DATABASE_URL` and `REDIS_URL` for you. We recommend:
+   - at least `standard` Dynos
+   - at least `standard2` for the Postgres Database
+   - at least `premium0` for the Redis Database
 2. Configure Heroku to automatically deploy the `main` branch of your repository.
 
 ## Alternative Deployment
