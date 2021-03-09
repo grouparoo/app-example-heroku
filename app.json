@@ -30,6 +30,7 @@
       "generator": "secret",
       "required": true
     },
-    "NPM_CONFIG_PRODUCTION": "false"
+    "GROUPAROO_LOGS_STDOUT_DISABLE_COLOR": "true",
+    "GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP": "true"
   }
 }
