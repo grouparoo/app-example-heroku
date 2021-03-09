@@ -1,6 +1,6 @@
 {
   "author": "Grouparoo Inc <hello@grouparoo.com>",
-  "name": "@grouparoo/app-example",
+  "name": "@grouparoo/app-example-heroku",
   "description": "An example Grouparoo Deployment",
   "version": "0.0.1",
   "license": "MPL-2.0",
