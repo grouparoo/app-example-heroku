@@ -49,3 +49,7 @@ Click this button to deploy a copy of this repository!
 
 - Heroku uses a `Procfile` to define the `web` and `worker` dynos.
 - This repo also powers the `Deploy with Heroku` button, so there's an `app.json` file to configure that deployment. You won't need that in your project.
+
+---
+
+Vist https://github.com/grouparoo/app-examples to see other Grouparoo Example Projects.
