@@ -20,7 +20,7 @@ grouparoo init .
 
 2. Install the Grouparoo plugins you want, e.g.: `grouparoo install @grouparoo/postgres`. Learn more @ https://www.grouparoo.com/docs/installation/plugins
 
-3. Create the `Procfile` to enable both `web` and `worker` dynos.
+3. Create the `Procfile` to enable both `web` and `worker` dynos.  We are running the same code, but using in-line environment varaibles to configure if the instance should boot as a web server or worker.
 
 ```
 web:    cd node_modules/@grouparoo/core && WEB_SERVER=true  WORKERS=0  ./bin/start
