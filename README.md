@@ -1,6 +1,6 @@
-# app-example-heroku
+# Grouparoo `app-example-heroku`
 
-Example Grouparoo project for deploying Grouparoo on Heroku.
+_An example project for deploying Grouparoo on Heroku._
 
 Goal: To create a scalable and flexible Grouparoo deployment that:
 
@@ -20,7 +20,7 @@ grouparoo init .
 
 2. Install the Grouparoo plugins you want, e.g.: `grouparoo install @grouparoo/postgres`. Learn more @ https://www.grouparoo.com/docs/installation/plugins
 
-3. Create the `Procfile` to enable both `web` and `worker` dynos.  We are running the same code, but using in-line environment varaibles to configure if the instance should boot as a web server or worker.
+3. Create the `Procfile` to enable both `web` and `worker` dynos. We are running the same code, but using in-line environment varaibles to configure if the instance should boot as a web server or worker.
 
 ```
 web:    cd node_modules/@grouparoo/core && WEB_SERVER=true  WORKERS=0  ./bin/start
@@ -29,17 +29,16 @@ worker: cd node_modules/@grouparoo/core && WEB_SERVER=false WORKERS=10 ./bin/sta
 
 ## Deployment Steps
 
-1. Create a new Heroku app with `Heroku Postgres` and `Heroku Redis`. Heroku will automatically configure the environment variables `DATABASE_URL` and `REDIS_URL` for you. We recommend:
-   - at least `standard` Dynos
-   - at least `standard2` for the Postgres Database
-   - at least `premium0` for the Redis Database
-2. Configure Heroku to automatically deploy the `main` branch of your repository.
+1. Create a new Heroku app with `Heroku Postgres` and `Heroku Redis`.
+   - Add the Heroku add-on `heroku-postgres` via `heroku addons:create heroku-postgresql:<PLAN_NAME>` or the heroku website. Learn more about the plan options here: https://devcenter.heroku.com/articles/heroku-postgresql. This add-on will set the Environment Variable `DATABASE_URL` which Grouparoo will automatically use. We recommend at least `standard2` for the Postgres Database
+   - Add the Heroku add-on `heroku-redis` via `heroku addons:create heroku-redis:<PLAN_NAME>` or the heroku website. Learn more about the plan options here: https://devcenter.heroku.com/articles/heroku-redis. This add-on will set the Environment Variable `REDIS_URL` which Grouparoo will automatically use. We recommend at least `premium0` for the Redis Database
+2. Configure Heroku to automatically deploy the `main` branch of your repository on the `deploy` tab of the Heroku website for your app.
 3. Configure the following environment variables:
    - `DATABASE_SSL_SELF_SIGNED=true` - The lower tier of Heroku databases use self-signed SSL certificates
    - `GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP=true`- Heroku adds timestamps to all log messages
    - `GROUPAROO_LOGS_STDOUT_DISABLE_COLOR=true`- Heroku will not render log messages in color
 
-## Alternative Deployment
+## Alternative Deployment Method
 
 Click this button to deploy a copy of this repository!
 
@@ -47,6 +46,8 @@ Click this button to deploy a copy of this repository!
 
 ## Notes
 
+- You can scale the number of `web` and `worker` processes with the `heroku ps` command. Depending on your workload, you may need more of one type of process than another.
+- Grouparoo will source Heroku's `PORT` variable automatically to bind to the proper port.
 - Heroku uses a `Procfile` to define the `web` and `worker` dynos.
 - This repo also powers the `Deploy with Heroku` button, so there's an `app.json` file to configure that deployment. You won't need that in your project.
 
