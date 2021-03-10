@@ -52,4 +52,4 @@ Click this button to deploy a copy of this repository!
 
 ---
 
-Vist https://github.com/grouparoo/app-examples to see other Grouparoo Example Projects.
+Visit https://github.com/grouparoo/app-examples to see other Grouparoo Example Projects.
