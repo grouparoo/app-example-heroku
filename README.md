@@ -31,13 +31,13 @@ worker: cd node_modules/@grouparoo/core && WEB_SERVER=false WORKERS=10 ./bin/sta
 
 ## Running this Repo
 
-Assuming you have node.js installed (v12+) and the Grouparoo CLI (`npm install -g grouparoo`):
+Assuming you have node.js installed (v12+):
 
 1. `git clone https://github.com/grouparoo/app-example-heroku.git`
 2. `cd app-example-heroku`
 3. `npm install`
 4. `cp .env.example .env`
-5. `grouparoo run`
+5. `npm start`
 
 ## Deployment Steps
 
