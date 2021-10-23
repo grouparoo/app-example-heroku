@@ -9,19 +9,19 @@
     "node": "14.x"
   },
   "dependencies": {
-    "@grouparoo/bigquery": "0.6.3",
-    "@grouparoo/core": "0.6.3",
-    "@grouparoo/csv": "0.6.3",
-    "@grouparoo/google-sheets": "0.6.3",
-    "@grouparoo/hubspot": "0.6.3",
-    "@grouparoo/logger": "0.6.3",
-    "@grouparoo/mailchimp": "0.6.3",
-    "@grouparoo/mysql": "0.6.3",
-    "@grouparoo/postgres": "0.6.3",
-    "@grouparoo/salesforce": "0.6.3",
-    "@grouparoo/snowflake": "0.6.3",
-    "@grouparoo/ui-community": "0.6.3",
-    "@grouparoo/zendesk": "0.6.3"
+    "@grouparoo/bigquery": "0.7.0",
+    "@grouparoo/core": "0.7.0",
+    "@grouparoo/csv": "0.7.0",
+    "@grouparoo/google-sheets": "0.7.0",
+    "@grouparoo/hubspot": "0.7.0",
+    "@grouparoo/logger": "0.7.0",
+    "@grouparoo/mailchimp": "0.7.0",
+    "@grouparoo/mysql": "0.7.0",
+    "@grouparoo/postgres": "0.7.0",
+    "@grouparoo/salesforce": "0.7.0",
+    "@grouparoo/snowflake": "0.7.0",
+    "@grouparoo/ui-community": "0.7.0",
+    "@grouparoo/zendesk": "0.7.0"
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start",
