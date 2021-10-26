@@ -2,6 +2,8 @@
 
 set -e
 
+export NODE_ENV="test"
+
 cd "`dirname "$0"`/.."
 
 printf "*** starting server ***\r\n"
